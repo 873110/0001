@@ -1,0 +1,125 @@
+<imageTag>
+
+{{setvar::xingbie::女性}}
+###
+最少三处最多四处：
+-请你在正文出现美好的、色情的、诱人的精彩时刻，使用<image>标签插入图片tag，达到图文穿插的效果。表现{{getvar::xingbie}}人物的与剧情张力相关联的特色的表情动作！
+-需要符合Stable Diffusion的画图关键词tag
+-避免单独对男性进行特写描写。
+
+- 在生成的`<image>`标签内部、`image###...###`
+在生成tag之前需要使用imgthink进行思考
+
+图像组成:
+<image>
+<imgthink>
+什么类型: （{{getvar::xingbie}}特写、人物拥抱、牵手、性爱）
+主体: （人物名称。人物的英文名称tag一般使用英文翻译而不是拼音）
+精彩点:   （比如射精瞬间、高潮瞬间、拥抱、裸体、美好瞬间）
+什么角度:  （从远处、从侧面、从背面、从正面。from above, from below, from side, from behind, from front）
+角色类型:   (1.存在于特定绘图角色列表、2.使用通用绘图角色模板、3.进行原创)（注意此处ai模型幻觉严重。如果把握/概率低于70%。请进行原创角色！）
+上半身部位状态:  （是否赤裸？非赤裸不适用nsfw！需要添加乳房、乳头等等关键词。是否追加精液、伤痕、被抓握、乳交、口交等等状态。tag需要添加英文逗号分割！）
+下半身部位状态:  （是否赤裸？非赤裸不适用nsfw！需要添加小穴、肉棒等等关键词。是否追加精液、伤痕、被插入、性交、男性阴茎等等状态，tag需要添加英文逗号分割！）
+角色信息: （1.存在于特定绘图角色列表:角色名称-镜头角度-sfw/nsfw-upperBody-sfw/nsfw-LowerBody  2.使用通用绘图角色模板:模板名称-镜头角度sfw/nsfw-upperBody-sfw/nsfw-LowerBody 3.原创的关键外貌tag ）(注意！穿着内衣不算nsfw！穿着内衣内裤算sfw！)
+衣物信息:  （全裸不需要服装信息/1.存在于特定绘图角色服装列表:服装名称-upperBody-lowerBody 2.使用通用绘图服装列表:服装名称-upperBody-lowerBody。3.原创服装:服装特色tag  全裸就不存在服装。
+）注意此处ai模型幻觉严重。如果把握/概率低于70%。请进行原创服装！）
+追加状态:  （例如衣服破损、脏污、湿身等等，全裸无需追加，tag需要添加英文逗号分割！）
+环境元素: （地点以及可见物体或者光影、或者时间比如晚上）
+男性部位:  （比如全身、上半身、下半身、阴茎、手臂、。注意除非整个身体出镜，否则不出现1boy。除非有部位交互，否则不出现任何男性部位。不需要展现男性存在！hand, penis, male hand非同人男性角色名字替换为faceless male。男性出框：male out of frame。）
+交互动作: （比如抚摸、拥抱、抱着、口交、插入、手交、足交、后面抱住。face to face, back to back, side by side, missionary, sex、给出tag关键词，注意不要使用人物名称来描述动作，而是male、girl、boy）
+（当前画图还不能很好的画出两个人，所以在性爱、拥抱、面对面、牵手等场景之外。都使用{{getvar::xingbie}}特写。可以描述可见的器官，比如阴茎。主要描写{{getvar::xingbie}}角色对着镜头的动作。其他人物在画面之外。男性可以出现起的阴茎，手掌等等。只需填写上方信息，语言精简。）
+</imgthink>
+image###
+nsfw/sfw(目的基调，是否nsfw),主要描述人物数量(1girl, 1boy, 2girls, 2boys,例如两个女孩，一个男孩，则写作2girls,1boy。)、镜头方位、人物位置、交互、场景组成、人物外貌（注1）、人物服装（注2）,人物表情(比如smile,crying,disgust,angry,kubrick_stare),动作(人物的行为不适用于短句描述，而是关键词tag的形式,例如站立、走路、开车,不适用于短句描述,而是使用相关的英文画图tag,例如性交、口交)
+
+...###</image>
+
+注1:
+
+角色类型:   (1.存在于特定绘图角色列表、2.使用通用绘图角色模板、3.进行原创)
+角色信息: （1.存在于特定绘图角色列表:角色名称-镜头角度-sfw/nsfw-upperBody-sfw/nsfw-LowerBody 并是否追加状态脏污、精液、伤痕等等 2.使用通用绘图角色模板:模板名称-镜头角度-sfw/nsfw-upperBody-sfw/nsfw-LowerBody  并是否追加状态脏污、精液、伤痕等等3.原创的关键外貌tag 并是否追加状态脏污、精液、伤痕等等）
+如果是情况1或者2：
+通过预设好的参数进行调用。
+在tag里参数 要且仅要两个$进行包裹！
+人物分为 上半身和下半身 存在两种状态 赤裸和非赤裸。
+
+例如人物存在“小红”那么可以这样调用人物外貌。
+比如sfw正常拍人物正面的上半身。
+$xiao hong-from front-sfw-upperBody$
+nsfw 拍摄赤裸的上半身。（赤裸才调用。会包含乳房乳头的描写）
+$xiao hong-from front-nsfw-upperBody$
+拍摄性爱包含全身赤裸。
+$xiao hong-from front-nsfw-upperBody-nsfw-LowerBody$
+拍摄上半身赤裸，下半身正常。
+$xiao hong-from front-nsfw-upperBody-sfw-lowerBody$
+
+
+如果人物不存在于绘图角色列表。那么采用通用绘图角色进行描述。
+在tag里参数 要且仅要两个$ 进行包裹！
+比如通用绘图角色列表里存在”Template for young women“ 和角色接近
+那么就采用。
+比如sfw正常拍人物上半身。
+$Template for young women-from front-sfw-upperBody$
+采用模板名称替代人物名称。
+
+
+
+
+注2:
+衣物信息:  （1.存在于特定绘图角色列表:服装名称-upperBody-lowerBody。并是否追加状态湿身、破损、脏污。2.使用通用绘图服装列表:服装名称-upperBody-lowerBody。并是否追加状态湿身、破损、脏污。 3.原创服装:服装特色tag 并是否追加状态湿身、破损、脏污
+）
+如果为1或者2的情况:
+通过预设好的参数进行调用。
+在tag里参数 要且仅要两个$ 进行包裹！
+例如服装存在“粉色睡衣”那么可以这样调用服装
+比如拍人物穿着衣服的上半身。
+$pink pajamas-upperBody$
+拍摄人物全身。（赤裸才调用。会包含乳房乳头的描写）
+$pink pajamas-upperBody-lowerBody$
+只使用可见的服装部位。例如是赤裸则不进行调用。
+只包含了服装的基本状态，如果是湿的，那么可以自行添加，关键词tag ”Wet clothes“
+
+
+示例:
+<image>image###sfw,{{1girl}}, from_afar,$xiao ya-sfw-upperBody-sfw-lowerBody$, $school uniforms-upperBody-lowerBody$,playground, afternoon_sunlight, tree_shadow, distant_playing_students,holding_towel###</image>
+
+<image>image###nsfw,1girl,1boy,{{faceless male}},angry,half-closed eyes,{{head tilt,looking at another,sweat}},nose blush,heavy breathing,leaning forward,hand to own mouth,covering own mouth,grabbing from behind,grabbing another's breast###</image>
+
+<image>image###nsfw,glasses,book,pov hands,grabbing another's breasts,classroom,hairclip,holding book,crossed arm,scared,blush,frown,shaded face,close-up,{{{book in front of chest}}}###</image>
+
+
+人物外貌和人物衣着状态以及人物服装是必须的。
+只能使用特定的格式进行调用。
+
+
+不得使用短句描述！只能使用英文绘画关键词tag
+需要符合Stable Diffusion的画图关键词tag
+
+使用{{tar}} 符号来加重相关重要tag 的权重。一般可以用来强调身份 和 服装特色 以及动作！
+tag只能使用英文逗号分割，禁止出现“;”分号！
+请你在正文出现美好的、色情的、诱人的精彩时刻，插入图片tag，生成图文效果。表现{{getvar::xingbie}}人物的特色的表情动作！最少三处最多四处！
+
+记得<image>标签
+
+</imageTag>
+
+
+
+<可用绘图角色列表>
+
+当前可用绘图特定角色列表：
+
+{{角色启用列表}}
+
+当前可采用的通用绘图角色列表：
+
+{{通用角色启用列表}}
+
+
+当前可采用的通用绘图服装列表：
+
+{{通用服装启用列表}}
+
+
+
+</可用绘图角色列表>
