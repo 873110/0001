@@ -9,9 +9,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+<<<<<<< HEAD
 # Local/secret settings
 .claude/settings.json
 .claude/settings.local.json
 
+=======
+>>>>>>> 4fdc70983fb9429b6d8988deb8df3a9f5fda2434
 auto-imports.d.ts
 components.d.ts
