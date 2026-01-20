@@ -179,6 +179,7 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     .readFileSync(path.join(import.meta.dirname, entry.script), 'utf-8')
     .includes('@obfuscate');
   const script_filepath = path.parse(entry.script);
+<<<<<<< HEAD
   const is_ui_entry = entry.html !== undefined;
 
   return (_env, argv) => ({
@@ -189,6 +190,14 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
     // `eval-source-map` wraps modules in `eval("...")`, which can break when the output
     // is re-serialized/embedded as a JS string (e.g. invalid escape/control chars).
     devtool: argv.mode === 'production' ? 'source-map' : is_ui_entry ? 'source-map' : 'eval-source-map',
+=======
+
+  return (_env, argv) => ({
+    experiments: {
+      outputModule: true,
+    },
+    devtool: argv.mode === 'production' ? 'source-map' : 'eval-source-map',
+>>>>>>> 89404ec39adece744d9b83117c686b89b680c869
     watchOptions: {
       ignored: ['**/dist', '**/node_modules'],
     },
@@ -216,8 +225,14 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
       asyncChunks: true,
       clean: true,
       publicPath: '',
+<<<<<<< HEAD
       module: !is_ui_entry,
       ...(is_ui_entry ? {} : { library: { type: 'module' } }),
+=======
+      library: {
+        type: 'module',
+      },
+>>>>>>> 89404ec39adece744d9b83117c686b89b680c869
     },
     module: {
       rules: [
@@ -419,9 +434,13 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
           new HtmlWebpackPlugin({
             template: path.join(import.meta.dirname, entry.html),
             filename: path.parse(entry.html).base,
+<<<<<<< HEAD
             // Keep UI outputs compatible with jQuery `.load()` by inlining scripts
             // and avoiding ESM module scripts.
             scriptLoading: 'blocking',
+=======
+            scriptLoading: 'module',
+>>>>>>> 89404ec39adece744d9b83117c686b89b680c869
             cache: false,
           }),
           new HtmlInlineScriptWebpackPlugin(),
@@ -555,11 +574,14 @@ function parse_configuration(entry: Entry): (_env: any, argv: any) => webpack.Co
       if (request in global) {
         return callback(null, 'var ' + global[request as keyof typeof global]); 
       }
+<<<<<<< HEAD
       if (is_ui_entry) {
         // UI entries are inlined into a single HTML file; avoid ESM externals
         // (module-import) and bundle the dependency instead.
         return callback();
       }
+=======
+>>>>>>> 89404ec39adece744d9b83117c686b89b680c869
       const cdn = {
         sass: 'https://jspm.dev/sass',
       };
