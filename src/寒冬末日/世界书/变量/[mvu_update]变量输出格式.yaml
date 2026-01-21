@@ -142,11 +142,11 @@ format: |-
   <JSONPatch>
   [
     { "op": "replace", "path": "/stat_data/世界/时间", "value": "午后 - 14:30" },
-    { "op": "delta", "path": "/stat_data/浅见亚美/健康", "value": -1 },
-    { "op": "replace", "path": "/stat_data/浅见亚美/内心想法", "value": "虽然有些冷，但至少哲也君还在我身边……" },
-    { "op": "replace", "path": "/stat_data/浅见亚美/登场状态", "value": "登场" },
-    { "op": "replace", "path": "/stat_data/藤井雪乃/登场状态", "value": "离场" },
-    { "op": "replace", "path": "/stat_data/浅见亚美/所在房间", "value": "楼层20/2001" },
+    { "op": "delta", "path": "/stat_data/许茂文/健康", "value": -1 },
+    { "op": "replace", "path": "/stat_data/许茂文/内心想法", "value": "虽然有些冷，但至少哲也君还在我身边……" },
+    { "op": "replace", "path": "/stat_data/许茂文/登场状态", "value": "登场" },
+    { "op": "replace", "path": "/stat_data/夏舒兰/登场状态", "value": "离场" },
+    { "op": "replace", "path": "/stat_data/许茂文/所在房间", "value": "楼层20/2001" },
     { "op": "insert", "path": "/stat_data/庇护所/庇护所能力/???新型空气过滤盾???", "value": { "desc": "过滤效率提升30%。" } },
     { "op": "insert", "path": "/stat_data/临时NPC/陌生拾荒者", "value": { "姓名": "陌生拾荒者", "健康": 100, "登场状态": "登场", "所在房间": "玄关" } }
   ]
