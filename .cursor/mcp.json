@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "inputs": [
     {
       "type": "promptString",
@@ -36,6 +37,15 @@
         "--autoConnect"
       ]
 >>>>>>> 015fe6d61b620f2c5622b7906b2ee5079f1ab1e9
+=======
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "pnpx",
+      "args": [
+        "chrome-devtools-mcp@latest",
+        "--autoConnect"
+      ]
+>>>>>>> 73c4586a45f7285ddd527cb83f79dadb3f5fdd2e
     }
   }
 }

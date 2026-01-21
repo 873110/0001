@@ -77,6 +77,7 @@ export default [
     },
   },
   eslintConfigPrettier,
+<<<<<<< HEAD
   globalIgnores([
     'dist/**',
     'node_modules/**',
@@ -90,4 +91,7 @@ export default [
     // Template sources shipped with the repo (not part of current workspace code).
     '初始模板/**',
   ]),
+=======
+  globalIgnores(['dist/**', 'node_modules/**', 'eslint.config.mjs', 'postcss.config.js', 'webpack.config.ts']),
+>>>>>>> 73c4586a45f7285ddd527cb83f79dadb3f5fdd2e
 ];

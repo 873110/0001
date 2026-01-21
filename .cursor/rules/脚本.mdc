@@ -1,5 +1,9 @@
 ---
 description: 当需要编写脚本时, 你应该参考本文件
+<<<<<<< HEAD
+=======
+alwaysApply: false
+>>>>>>> 73c4586a45f7285ddd527cb83f79dadb3f5fdd2e
 ---
 # 脚本
 
@@ -18,10 +22,14 @@ description: 当需要编写脚本时, 你应该参考本文件
 ## 向酒馆网页挂载 vue 组件时的样式问题
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 由于脚本运行在 iframe 中, 项目中所使用的 style 仅会应用于 iframe 内而不会应用到整个酒馆网页. 因此, 当通过脚本向酒馆网页添加 DOM 时 (无论是通过 jquery 添加, 还是通过 vue 挂载), 你都需要将样式复制到酒馆网页的 `<head>` 中:
 =======
 由于脚本运行在 iframe 中, 脚本所设置的 style (包括 tailwindcss 产生的) 仅会在 iframe 内生效而不会应用到整个酒馆网页; 也就是说, 当我们用 jquery 创建了挂载位置, 并想将 vue 组件挂载到酒馆网页上时, 组件所需要的样式、所填写的 tailwindcss class 都无法生效.
 >>>>>>> 015fe6d61b620f2c5622b7906b2ee5079f1ab1e9
+=======
+由于脚本运行在 iframe 中, 脚本所设置的 style (包括 tailwindcss 产生的) 仅会在 iframe 内生效而不会应用到整个酒馆网页; 也就是说, 当我们用 jquery 创建了挂载位置, 并想将 vue 组件挂载到酒馆网页上时, 组件所需要的样式、所填写的 tailwindcss class 都无法生效.
+>>>>>>> 73c4586a45f7285ddd527cb83f79dadb3f5fdd2e
 
 基于 vue 组件用途, 这有两个解决方案.
 
@@ -96,6 +104,7 @@ eventOn(getButtonEvent('按钮名'), () => {
   console.log('按钮被点击了');
 });
 ```
+<<<<<<< HEAD
 
 ## 第三方库和CDN引用
 
@@ -121,3 +130,5 @@ import something from 'https://testingcf.jsdelivr.net/npm/package-name@version/+
 // ❌ 错误：可能无法在国内访问
 import something from 'https://cdn.jsdelivr.net/npm/package-name@version/+esm';
 ```
+=======
+>>>>>>> 73c4586a45f7285ddd527cb83f79dadb3f5fdd2e
