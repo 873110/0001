@@ -121,20 +121,20 @@ type CharacterKey =
   | string;
 
 const CHARACTER_ORDER = [
-  '浅见亚美',
+  '许茂文',
   '相田哲也',
-  '星野琉璃',
+  '杨幂',
   '早川遥',
   '早川舞',
-  '藤井雪乃',
+  '夏舒兰',
   '中村惠子',
   // '爱宫心爱',
-  // '爱宫铃',
+  // '唐嫣',
   '桃乐丝・泽巴哈',
   // '何铃',
-  '王静',
+  '李清波',
   // '康绮月',
-  // '薛萍',
+  // '陈雪晴',
   '小泽花',
 ] as const;
 
@@ -311,7 +311,7 @@ async function onClickDeleteRole(key: CharacterKey) {
     }
 
     const removeCore = !isTemp && existedCore;
-    const removeTemp = existedTemp;
+    const removeTemp = isTemp ? existedTemp : existedTemp;
     if (removeCore) _.unset(mvu_data, ['stat_data', name]);
     if (removeTemp) _.unset(mvu_data, ['stat_data', '临时NPC', name]);
 
